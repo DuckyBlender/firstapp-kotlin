@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        // Create the sil function, this is inefficient because of the repeated function calls
         fun sil(num: Int): Long {
             return if(num <= 1 ) 1
             else num * sil(num-1 )
@@ -74,12 +75,12 @@ class MainActivity : AppCompatActivity() {
             try {
                 val num = findViewById<EditText>(R.id.inputSilnia).text.toString().toInt()
                 // Check if number is in range
-                if (num in 1..10) {
+                if (num in 1..20) {
                     findViewById<TextView>(R.id.textSilnia).text = sil(num).toString()
                 }
                 // If not, show error message
                 else {
-                    findViewById<TextView>(R.id.textSilnia).text = "Limit: 1-10"
+                    findViewById<TextView>(R.id.textSilnia).text = "Limit: 1-20"
                 }
             // If the input is not int
             } catch (e: Exception) {

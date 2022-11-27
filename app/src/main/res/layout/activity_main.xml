@@ -85,8 +85,8 @@
 
     <TextView
         android:id="@+id/currentImageText"
-        android:layout_width="37dp"
-        android:layout_height="50dp"
+        android:layout_width="39dp"
+        android:layout_height="39dp"
         android:layout_marginTop="16dp"
         android:background="#E4BABA"
         android:gravity="center"
